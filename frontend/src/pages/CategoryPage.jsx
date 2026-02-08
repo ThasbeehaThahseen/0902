@@ -29,6 +29,11 @@ export const CategoryPage = () => {
     kids: "Kids Collection"
   };
 
+  // Scroll to top on mount
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [gender]);
+
   // For kids, first show gender selection
   if (gender === 'kids') {
     return (
