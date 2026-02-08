@@ -52,9 +52,11 @@ export const OwnerProductsPage = () => {
   useEffect(() => {
     // For kids section, show subcategories first instead of products
     if (section === 'kids' && ageGroup && gender && !category) {
+      window.scrollTo(0, 0);
       setShowSubcategories(true);
       setLoadingProducts(false);
     } else if (isAuthenticated) {
+      window.scrollTo(0, 0);
       setShowSubcategories(false);
       loadProducts();
     }
