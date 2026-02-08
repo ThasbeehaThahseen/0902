@@ -72,12 +72,15 @@
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .product-card {
   transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .product-card:hover {
@@ -92,7 +95,7 @@
 .product-image-container {
   position: relative;
   width: 100%;
-  padding-top: 75%;
+  padding-top: 100%;
   overflow: hidden;
   background: #f7fafc;
 }
