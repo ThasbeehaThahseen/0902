@@ -19,6 +19,7 @@ export const OwnerSectionPage = () => {
   }, [isAuthenticated, loading, navigate]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     loadCategories();
   }, [section]);
 
