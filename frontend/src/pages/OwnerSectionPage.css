@@ -5,25 +5,28 @@
 
 .section-header {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .section-header-content {
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 .section-header h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #1a202c;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
 }
 
 .section-header p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #718096;
-  margin: 0;
+  margin: 0.25rem 0 0 0;
 }
 
 .section-content {
