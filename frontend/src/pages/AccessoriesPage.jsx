@@ -13,6 +13,11 @@ export const AccessoriesPage = () => {
   // Get accessories categories
   const accessoriesCategories = categories.accessories || [];
 
+  // Scroll to top on mount
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [subcategory]);
+
   // If no subcategory, show main accessories categories
   if (!subcategory) {
     return (
