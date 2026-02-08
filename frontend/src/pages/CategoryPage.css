@@ -190,11 +190,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .category-page {
-    padding: 24px 16px 60px;
+    padding: 16px 12px 60px;
   }
 
   .page-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    gap: 8px;
   }
 
   .categories-grid {
