@@ -22,6 +22,11 @@ export const KidsCategoryPage = () => {
 
   const kidsCategories = categories.kids || [];
 
+  // Scroll to top on mount
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [kidsGender]);
+
   return (
     <div className="kids-category-page" data-testid="kids-category-page">
       <div className="page-header">
