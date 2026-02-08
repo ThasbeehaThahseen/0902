@@ -142,11 +142,16 @@
 
 @media (max-width: 768px) {
   .accessories-page {
-    padding: 1rem;
+    padding: 16px 12px 60px;
+  }
+
+  .page-header {
+    margin-bottom: 30px;
+    gap: 8px;
   }
 
   .page-title {
-    font-size: 2rem;
+    font-size: clamp(28px, 6vw, 36px);
   }
 
   .categories-grid,
