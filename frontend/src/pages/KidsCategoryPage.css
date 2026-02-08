@@ -1,13 +1,16 @@
 .kids-category-page {
   min-height: 100vh;
   background: var(--surface-cream);
-  padding: 40px 24px 80px;
+  padding: 20px 16px 80px;
 }
 
 .page-header {
   max-width: 1200px;
-  margin: 0 auto 60px;
-  text-align: center;
+  margin: 0 auto 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .back-btn {
@@ -16,10 +19,10 @@
   gap: 8px;
   color: var(--primary-navy);
   font-weight: 600;
-  margin-bottom: 24px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border: 1px solid var(--border-light);
   border-radius: 8px;
+  align-self: flex-start;
 }
 
 .back-btn:hover {
@@ -28,15 +31,18 @@
 }
 
 .page-title {
-  font-size: clamp(36px, 6vw, 56px);
+  font-size: clamp(32px, 6vw, 48px);
   color: var(--primary-navy);
-  margin-bottom: 16px;
+  margin: 0;
+  text-align: center;
 }
 
 .page-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-muted);
   font-style: italic;
+  text-align: center;
+  margin: 0;
 }
 
 /* Age Group Section */
