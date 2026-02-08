@@ -23,6 +23,7 @@ export const ProductsPage = () => {
   const ageGroup = searchParams.get('ageGroup');
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     loadProducts();
   }, [gender, subcategory, kidsGender, ageGroup]);
 
