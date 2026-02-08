@@ -1,0 +1,211 @@
+.category-page {
+  min-height: 100vh;
+  background: var(--surface-cream);
+  padding: 40px 24px 80px;
+}
+
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-navy);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding: 12px 24px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+}
+
+.back-btn:hover {
+  background: var(--surface-white);
+  border-color: var(--primary-burgundy);
+}
+
+.page-title {
+  font-size: clamp(36px, 6vw, 56px);
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Categories Section */
+.categories-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 32px;
+  text-align: center;
+  color: var(--primary-navy);
+  margin-bottom: 40px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.category-card {
+  border: 2px solid var(--border-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  background: var(--surface-white);
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(122, 37, 56, 0.12);
+  border-color: var(--primary-burgundy);
+}
+
+.category-card-content {
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.category-icon-svg {
+  margin-bottom: 24px;
+  color: var(--primary-burgundy);
+  display: flex;
+  justify-content: center;
+}
+
+.category-card:hover .category-icon-svg {
+  color: var(--primary-navy);
+}
+
+.category-name {
+  font-size: 26px;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.category-description {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-burgundy);
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  color: var(--primary-navy);
+}
+
+/* Kids Gender Selection */
+.kids-gender-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kids-gender-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.kids-gender-card {
+  border: 3px solid var(--border-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  background: var(--surface-white);
+}
+
+.kids-gender-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(30, 58, 95, 0.15);
+  border-color: var(--accent-gold);
+}
+
+.kids-gender-content {
+  padding: 56px 32px;
+  text-align: center;
+}
+
+.kids-icon-svg {
+  margin-bottom: 24px;
+  color: var(--accent-gold);
+  display: flex;
+  justify-content: center;
+}
+
+.kids-gender-card:hover .kids-icon-svg {
+  color: var(--primary-burgundy);
+}
+
+.kids-gender-card h3 {
+  font-size: 32px;
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+}
+
+.kids-gender-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.select-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-burgundy);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.select-btn:hover {
+  color: var(--primary-navy);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-page {
+    padding: 24px 16px 60px;
+  }
+
+  .page-header {
+    margin-bottom: 40px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .kids-gender-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .category-card-content {
+    padding: 36px 24px;
+  }
+
+  .kids-gender-content {
+    padding: 40px 24px;
+  }
+}

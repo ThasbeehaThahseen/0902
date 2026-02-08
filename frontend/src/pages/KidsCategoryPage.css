@@ -1,0 +1,171 @@
+.kids-category-page {
+  min-height: 100vh;
+  background: var(--surface-cream);
+  padding: 40px 24px 80px;
+}
+
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-navy);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding: 12px 24px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+}
+
+.back-btn:hover {
+  background: var(--surface-white);
+  border-color: var(--primary-burgundy);
+}
+
+.page-title {
+  font-size: clamp(36px, 6vw, 56px);
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Age Group Section */
+.age-group-section {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  padding: 32px;
+  background: var(--surface-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.age-group-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.age-group-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+.age-group-trigger {
+  height: 56px;
+  font-size: 16px;
+  border: 2px solid var(--border-light);
+}
+
+.age-group-trigger:hover {
+  border-color: var(--primary-burgundy);
+}
+
+.categories-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 40px;
+}
+
+.no-selection-message {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 48px 32px;
+  text-align: center;
+  background: var(--surface-white);
+  border-radius: 12px;
+  border: 2px dashed var(--border-light);
+}
+
+.no-selection-message p {
+  font-size: 18px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.categories-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.category-card {
+  border: 2px solid var(--border-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  background: var(--surface-white);
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(122, 37, 56, 0.12);
+  border-color: var(--primary-burgundy);
+}
+
+.category-card-content {
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.category-icon-svg {
+  margin-bottom: 24px;
+  color: var(--primary-burgundy);
+  display: flex;
+  justify-content: center;
+}
+
+.category-card:hover .category-icon-svg {
+  color: var(--primary-navy);
+}
+
+.category-name {
+  font-size: 24px;
+  color: var(--primary-navy);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-burgundy);
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  color: var(--primary-navy);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .kids-category-page {
+    padding: 24px 16px 60px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .category-card-content {
+    padding: 36px 24px;
+  }
+}

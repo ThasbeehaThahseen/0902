@@ -1,0 +1,161 @@
+.cart-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.cart-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.empty-cart {
+  margin-top: 60px;
+}
+
+.empty-cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.5;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.cart-checkbox {
+  flex-shrink: 0;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cart-item-image:hover {
+  transform: scale(1.05);
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-item-details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-item-details h3:hover {
+  text-decoration: underline;
+}
+
+.item-description {
+  font-size: 14px;
+  color: hsl(var(--muted-foreground));
+}
+
+.item-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+.item-selections {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.item-selections span {
+  padding: 4px 12px;
+  background-color: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+.remove-btn {
+  color: hsl(var(--destructive));
+}
+
+.enquiry-footer {
+  position: sticky;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: hsl(var(--card));
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.enquiry-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #25D366;
+  color: white;
+}
+
+.enquiry-btn:hover {
+  background-color: #20ba5a;
+}
+
+@media (max-width: 768px) {
+  .cart-item-content {
+    flex-wrap: wrap;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .remove-btn {
+    width: 100%;
+  }
+}
