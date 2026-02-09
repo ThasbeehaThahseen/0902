@@ -220,32 +220,49 @@
 }
 
 @media (max-width: 768px) {
+  .fresh-arrivals-page {
+    padding: 16px 12px 60px;
+  }
+
+  .page-header {
+    margin-bottom: 20px;
+    gap: 8px;
+  }
+
   .page-title {
     font-size: 2rem;
   }
   
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 6px;
   }
   
   .product-image-wrapper {
-    padding-top: 75%;
+    padding-top: 100%; /* Keep square on mobile */
   }
 
   .product-info {
-    padding: 10px;
+    padding: 8px 6px;
   }
 
   .product-name {
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 3px;
   }
 
   .product-short-desc {
-    font-size: 11px;
+    font-size: 10px;
+    margin-bottom: 4px;
   }
 
   .product-price {
-    font-size: 15px;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .new-badge {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.65rem;
   }
 }
