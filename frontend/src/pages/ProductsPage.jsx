@@ -71,7 +71,16 @@ export const ProductsPage = () => {
     return primaryImage ? primaryImage.url : product.images[0].url;
   };
 
-  const categoryTitle = products[0]?.name?.split(' ')[0] || subcategory || 'Products';
+  // Get category title - capitalize subcategory name
+  const getCategoryTitle = () => {
+    if (subcategory) {
+      // Capitalize first letter of subcategory
+      return subcategory.charAt(0).toUpperCase() + subcategory.slice(1);
+    }
+    return 'Products';
+  };
+  
+  const categoryTitle = getCategoryTitle();
 
   // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
