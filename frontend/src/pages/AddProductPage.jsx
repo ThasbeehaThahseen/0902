@@ -685,17 +685,33 @@ export const AddProductPage = () => {
                     </div>
                   ))}
                   {formData.images.length < 10 && (
-                    <label className="upload-box" data-testid="upload-box">
-                      <input
-                        type="file"
-                        multiple
-                        accept="image/*"
-                        onChange={handleImageUpload}
-                        style={{ display: 'none' }}
-                      />
-                      <Upload size={48} />
-                      <span>Upload Images</span>
-                    </label>
+                    <div className="upload-options">
+                      <label className="upload-box" data-testid="upload-box">
+                        <input
+                          type="file"
+                          multiple
+                          accept="image/*"
+                          onChange={handleImageUpload}
+                          style={{ display: 'none' }}
+                        />
+                        <Upload size={48} />
+                        <span>Choose from Gallery</span>
+                      </label>
+                      <label className="upload-box camera-box" data-testid="camera-box">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          capture="environment"
+                          onChange={handleCameraCapture}
+                          style={{ display: 'none' }}
+                        />
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                          <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        <span>Take Photo</span>
+                      </label>
+                    </div>
                   )}
                 </div>
                 <p className="image-count">
