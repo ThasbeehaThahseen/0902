@@ -16,6 +16,7 @@ export const FreshArrivalsPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     loadFreshArrivals();
   }, []);
 
