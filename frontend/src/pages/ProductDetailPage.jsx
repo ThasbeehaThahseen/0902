@@ -77,6 +77,7 @@ export const ProductDetailPage = () => {
   }, [id]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     loadProduct();
   }, [loadProduct]);
 
