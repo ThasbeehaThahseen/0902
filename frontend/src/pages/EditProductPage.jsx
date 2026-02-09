@@ -236,6 +236,56 @@ export const EditProductPage = () => {
     }
   };
 
+  const handleCameraCapture = async (e) => {
+    const files = Array.from(e.target.files);
+    if (formData.images.length + files.length > 10) {
+      toast({
+        title: 'Too many images',
+        description: 'You can upload maximum 10 images',
+        variant: 'destructive'
+      });
+      return;
+    }
+
+    try {
+      const uploadedImages = [];
+      for (const file of files) {
+        const formDataUpload = new FormData();
+        formDataUpload.append('file', file);
+
+        const response = await axios.post(`${API}/upload-image`, formDataUpload, {
+          headers: { 
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+
+        uploadedImages.push({
+          url: response.data.image_url,
+          base64: response.data.image_base64,
+          is_primary: formData.images.length === 0 && uploadedImages.length === 0
+        });
+      }
+
+      setFormData({
+        ...formData,
+        images: [...formData.images, ...uploadedImages]
+      });
+
+      toast({
+        title: 'Success',
+        description: 'Images captured successfully'
+      });
+    } catch (error) {
+      console.error('Error uploading images:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to upload images',
+        variant: 'destructive'
+      });
+    }
+  };
+
   const removeImage = (index) => {
     const newImages = formData.images.filter((_, i) => i !== index);
     // If removing the primary image, make the first one primary
