@@ -564,6 +564,8 @@ export const AddProductPage = () => {
       } else {
         setCurrentStep(currentStep + 1);
       }
+      // Scroll to top of the page
+      window.scrollTo(0, 0);
     } else {
       toast({
         title: 'Incomplete',
@@ -582,6 +584,8 @@ export const AddProductPage = () => {
       } else {
         setCurrentStep(currentStep - 1);
       }
+      // Scroll to top of the page
+      window.scrollTo(0, 0);
     }
   };
 
