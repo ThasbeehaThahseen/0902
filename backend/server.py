@@ -436,7 +436,7 @@ async def detect_color_from_image(image_base64: str) -> dict:
         
     except Exception as e:
         logging.error(f"Color detection error: {str(e)}")
-        return {"suggested_colors": color_names}
+        return {"primary_color": "Black", "suggested_colors": color_names}
 
 # ==================== AUTHENTICATION ROUTES ====================
 
