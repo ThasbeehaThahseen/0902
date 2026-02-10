@@ -432,7 +432,7 @@ async def detect_color_from_image(image_base64: str) -> dict:
         
         logging.info(f"Detected color: {detected_color} (RGB: {dominant_rgb})")
         
-        return {"suggested_colors": color_names}
+        return {"primary_color": detected_color, "suggested_colors": color_names}
         
     except Exception as e:
         logging.error(f"Color detection error: {str(e)}")
