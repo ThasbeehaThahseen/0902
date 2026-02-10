@@ -292,8 +292,11 @@ export const EditProductPage = () => {
     try {
       const uploadedImages = [];
       for (const file of files) {
+        // Compress the image before uploading
+        const compressedFile = await compressImage(file, 1920, 0.7);
+        
         const formDataUpload = new FormData();
-        formDataUpload.append('file', file);
+        formDataUpload.append('file', compressedFile);
 
         const response = await axios.post(`${API}/upload-image`, formDataUpload, {
           headers: { 
