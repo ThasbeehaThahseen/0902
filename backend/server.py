@@ -238,6 +238,7 @@ class ProductUpdate(BaseModel):
     images: Optional[List[ProductImage]] = None
 
 class ColorDetectionResponse(BaseModel):
+    primary_color: str
     suggested_colors: List[str]
 
 class Review(BaseModel):
